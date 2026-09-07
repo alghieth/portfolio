@@ -1,0 +1,104 @@
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 140px 0 60px 0;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* سطر التمهيد العلوي */
+.hero-intro {
+  font-family: var(--font-mono);
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  color: var(--accent);
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+/* الاسم بخط عريض وأبيض ساطع */
+.hero-name {
+  font-size: clamp(30px, 7.5vw, 75px);
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* التخصص بلون كحلي/رمادي متدرج */
+.hero-subtitle {
+  font-size: clamp(30px, 7vw, 70px);
+  font-weight: 700;
+  color: var(--text-muted);
+  line-height: 1.1;
+  margin: 10px 0 0 0;
+}
+
+/* الشرح التوضيحي */
+.hero-description {
+  max-width: 640px;
+  margin-top: 25px;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* زر العمل المباشر (CTA) */
+.hero-cta-wrapper {
+  margin-top: 45px;
+}
+
+.hero-cta-button {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--accent);
+  background-color: transparent;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  padding: 18px 28px;
+  text-decoration: none;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hero-cta-button:hover {
+  background-color: var(--accent-tint);
+  transform: translate(-3px, -3px);
+  box-shadow: 4px 4px 0 var(--accent);
+}
+
+/* ضبط الهوامش للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 120px 24px 60px 24px;
+    min-height: 100vh
+  }
+
+  .hero-intro {
+    margin-bottom: 18px;
+  }
+
+  .hero-description {
+    margin-top: 20px;
+  }
+
+  .hero-cta-wrapper {
+    margin-top: 35px;
+  }
+
+  .hero-cta-button {
+    padding: 16px 24px;
+    font-size: 0.9rem;
+  }
+}

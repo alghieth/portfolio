@@ -1,0 +1,50 @@
+.projects-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+/* في حال لم تكن معرفة مسبقاً في ملف عام */
+.section-title {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 40px;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.section-number {
+  font-family: var(--font-mono);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--accent);
+  margin-right: 10px;
+}
+
+.section-title h2 {
+  font-size: clamp(24px, 5vw, 32px);
+  color: var(--text-main);
+  font-weight: 700;
+  margin: 0 20px 0 0;
+}
+
+.title-line {
+  content: '';
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: 1px;
+  background-color: var(--bg-hover);
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ضبط المسافات للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 80px 24px;
+  }
+}

@@ -1,0 +1,154 @@
+.jobs-section {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.jobs-tabs-container {
+  display: flex;
+  gap: 30px;
+  min-height: 320px;
+  margin-top: 30px;
+}
+
+/* قائمة التبويبات الجانبية */
+.jobs-tab-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  border-left: 2px solid var(--bg-hover);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* زر كل تبويب */
+.jobs-tab-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 42px;
+  padding: 0 20px;
+  background: transparent;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.jobs-tab-button:hover {
+  background-color: var(--accent-tint);
+  color: var(--accent);
+}
+
+.jobs-tab-button.active {
+  color: var(--accent);
+}
+
+/* الشريط الرأسي المتحرك للمؤشر */
+.highlight-bar {
+  position: absolute;
+  top: 0;
+  left: -2px;
+  width: 2px;
+  height: 42px;
+  background-color: var(--accent);
+  border-radius: 2px;
+  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* تفاصيل الوظيفة / المشروع */
+.jobs-content {
+  flex: 1;
+  padding-left: 10px;
+}
+
+.job-role {
+  margin: 0 0 6px 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.job-company a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.job-company a:hover {
+  text-decoration: underline;
+}
+
+.job-range {
+  margin: 0 0 25px 0;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* قائمة المسؤوليات والإنجازات */
+.job-duties {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.job-duties li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.job-duties li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* التجاوب مع الشاشات الصغيرة (التحول لأزرار أفقية أعلى المحتوى) */
+@media (max-width: 768px) {
+  .jobs-section {
+    padding: 80px 24px;
+  }
+
+  .jobs-tabs-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .jobs-tab-list {
+    flex-direction: row;
+    overflow-x: auto;
+    border-left: none;
+    border-bottom: 2px solid var(--bg-hover);
+    width: 100%;
+  }
+
+  .jobs-tab-button {
+    padding: 0 15px;
+    height: 40px;
+  }
+
+  .highlight-bar {
+    top: auto;
+    bottom: -2px;
+    height: 2px;
+    width: 120px; /* يمكن ضبط العرض أو استخدام مكتبة لقياس التبويب تلقائياً */
+    display: none; /* إخفاء الخط الرأسي في الهواتف لتبسيط واجهة التمرير الأفقي */
+  }
+
+  .jobs-content {
+    padding-left: 0;
+  }
+}

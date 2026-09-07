@@ -1,0 +1,100 @@
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1),
+              visibility 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.loader-container.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+/* رسم الشعار والخطوط المضيئة */
+.loader-logo {
+  width: 85px;
+  height: 85px;
+}
+
+.logo-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.logo-frame {
+  fill: transparent;
+  stroke: var(--accent);
+  stroke-width: 4;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  animation: drawStroke 1.4s ease-in-out forwards;
+}
+
+.logo-letters {
+  font-family: var(--font-mono);
+  font-size: 34px;
+  font-weight: 700;
+  fill: var(--accent);
+  opacity: 0;
+  animation: fadeInText 0.6s ease forwards 0.8s;
+}
+
+/* شريط التقدم والعداد */
+.loader-progress-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 140px;
+}
+
+.loader-bar-bg {
+  width: 100%;
+  height: 3px;
+  background-color: var(--bg-hover);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.loader-bar-fill {
+  height: 100%;
+  background-color: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+  transition: width 0.03s linear;
+}
+
+.loader-counter {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* Keyframes لحركة الرسم والظهور */
+@keyframes drawStroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
