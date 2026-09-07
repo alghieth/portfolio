@@ -106,7 +106,7 @@ export default function Navbar() {
 
           <div className="resume-btn-wrapper">
             <a
-              href="../Al_Ghieth_Melhem_Resume.pdf"
+              href="/Al_Ghieth_Melhem_Resume.pdf"
               target="_blank"
               rel="noreferrer"
               className="resume-button"
