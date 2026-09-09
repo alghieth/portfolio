@@ -215,7 +215,7 @@
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     height: 100%;
-    opacity: 0.18; /* تظليل الصورة لتظهر كخلفية باهتة */
+    opacity: 0.8; /* تظليل الصورة لتظهر كخلفية باهتة */
     z-index: 1;
     border-radius: 4px;
     background-color: var(--accent);
