@@ -1,8 +1,7 @@
-/* .portfolio-app {
-    padding: 0 150px;
+html {
+  scroll-behavior: smooth;
 }
-@media (max-width: 768px) {
-    .portfolio-app {
-    padding: 0 24px;
+
+section {
+  scroll-margin-top: 80px; 
 }
-} */
