@@ -43,7 +43,7 @@ export default function Projects() {
     "A comprehensive corporate visual identity engineered for a distinguished legal practice. Encompassed the design of the official logo suite, branded stationary, court-ready document templates, and bespoke business collateral deployed across all professional touchpoints.",
     technologies: ["Branding", "Corporate Identity", "Adobe Photoshop"],
     image: brandingMockupImg, 
-    liveUrl: "https://alghieth.github.io/albarede/#home-page", 
+     
     githubUrl: null, 
     },
   {
@@ -61,7 +61,7 @@ export default function Projects() {
         "An interactive e-learning web platform engineered for healthcare professionals to master specialized German medical terminology, integrating Speech-to-Text and Text-to-Speech APIs for real-time vocal training, pronunciation assessment, and automated retention drills.",
     technologies: ["JavaScript", "Web Speech API", "CSS3"],
     image: medicalAppImg,
-    liveUrl: null,
+    liveUrl: "https://alghieth.github.io/Fachbegriffe-Mainz/",
     githubUrl: "https://alghieth.github.io/Fachbegriffe-Mainz/", }
 ];
 
